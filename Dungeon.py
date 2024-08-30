@@ -38,7 +38,7 @@ def main():
             print(colorize("I don't understand that command.", RED))
 
 if __name__ == "__main__":
-    print(colorize("ZORK: The Great Underground Empire", BLUE, BG_BLUE))
-    print(colorize("A Dungeon Crawl Adventure", YELLOW, BG_BLUE))
+    print(colorize("Dungeon - Abandon All Hope, Ye Who Enter Here", BLUE, BG_BLUE))
+    print(colorize("A Text Adventure of Despair and Discovery", YELLOW, BG_BLUE))
     print()
     main()
