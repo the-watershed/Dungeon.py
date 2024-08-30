@@ -1,0 +1,242 @@
+{
+  "locations": {
+    "white_house_1": [
+      {
+        "name": "Kitchen",
+        "description": "You step into the warm and inviting kitchen, the scent of freshly baked cookies wafting through the air. The sunlight streaming through the windows highlights the gleaming stainless steel appliances and the rich wood tones of the cabinets. A large island in the center of the room beckons you to sit and stay a while.",
+        "coordinates": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "objects": [
+          {
+            "name": "table",
+            "description": "A beautiful wooden table with a vase of fresh flowers.",
+            "container": false,
+            "visibility": "visible"
+          },
+          {
+            "name": "drawer",
+            "description": "A drawer with a small lock, adorned with intricate carvings.",
+            "container": true,
+            "contents": [
+              {
+                "name": "key",
+                "description": "A small, shiny key that looks like it might unlock a treasure chest."
+              }
+            ],
+            "visibility": "visible"
+          }
+        ]
+      },
+      {
+        "name": "Grand Hallway",
+        "description": "You enter the grand hallway, the soaring ceiling and sweeping staircase making you feel like you're in a fairytale. The walls are adorned with elegant portraits and the floor is made of rich, dark wood. A beautiful chandelier hangs from the ceiling, casting a warm and welcoming glow over the entire space.",
+        "coordinates": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "objects": [
+          {
+            "name": "portrait",
+            "description": "A stunning portrait of a famous person, painted in vivid colors.",
+            "container": false,
+            "visibility": "visible"
+          },
+          {
+            "name": "chest",
+            "description": "A large, ornate chest with a complex lock, adorned with intricate carvings.",
+            "container": true,
+            "contents": [
+              {
+                "name": "gold coin",
+                "description": "A shiny gold coin that looks like it might be worth a fortune."
+              }
+            ],
+            "visibility": "visible"
+          }
+        ]
+      },
+      {
+        "name": "Living Room",
+        "description": "You step into the cozy living room, the plush furniture and soft lighting making you feel like you're in a warm hug. The walls are painted a soothing color and the floor is covered in a soft, plush carpet. A large stone fireplace dominates one wall, and the room is filled with the comforting scent of wood smoke.",
+        "coordinates": {
+          "x": 0,
+          "y": 2,
+          "z": 0
+        },
+        "objects": [
+          {
+            "name": "couch",
+            "description": "A comfortable, plush couch that looks like it might be the perfect place to take a nap.",
+            "container": false,
+            "visibility": "visible"
+          },
+          {
+            "name": "bookshelf",
+            "description": "A tall, wooden bookshelf filled with books of all shapes and sizes.",
+            "container": true,
+            "contents": [
+              {
+                "name": "book",
+                "description": "A book about history, filled with fascinating stories and anecdotes."
+              }
+            ],
+            "visibility": "visible"
+          }
+        ]
+      },
+      {
+        "name": "Garden",
+        "description": "You step out into the beautiful garden, the warm sunshine and fresh air enveloping you like a warm blanket. The garden is filled with vibrant flowers and lush greenery, and the sound of birdsong fills the air. A meandering path leads you through the garden, past a tranquil pond and under a picturesque arbor.",
+        "coordinates": {
+          "x": 1,
+          "y": 2,
+          "z": 0
+        },
+        "objects": [
+          {
+            "name": "bench",
+            "description": "A beautiful, wooden bench that looks like it might be the perfect place to sit and relax.",
+            "container": false,
+            "visibility": "visible"
+          },
+          {
+            "name": "flower pot",
+            "description": "A pot filled with vibrant, colorful flowers that look like they might be blooming just for you.",
+            "container": true,
+            "contents": [
+              {
+                "name": "flower",
+                "description": "A beautiful, delicate flower that looks like it might be the perfect addition to any bouquet."
+              }
+            ],
+            "visibility": "visible"
+          }
+        ]
+      },
+      {
+        "name": "Northern Area",
+        "description": "You enter the northern area, the air crisp and cool. The sky above is a brilliant blue, and the trees are adorned with a dusting of snow. A frozen pond glimmers in the distance, and the sound of snow crunching underfoot fills the air.",
+        "coordinates": {
+          "x": 0,
+          "y": 3,
+          "z": 0
+        },
+        "objects": [
+          {
+            "name": "tree",
+            "description": "A tall, majestic tree that looks like it might be the perfect place to build a treehouse.",
+            "container": false,
+            "visibility": "visible"
+          },
+          {
+            "name": "rock",
+            "description": "A large, granite rock that looks like it might be the perfect place to sit and take in the view.",
+            "container": true,
+            "contents": [
+              {
+                "name": "mineral",
+                "description": "A valuable mineral that looks like it might be worth a fortune."
+              }
+            ],
+            "visibility": "visible"
+          }
+        ]
+      },
+      {
+        "name": "Southern Area",
+        "description": "You enter the southern area, the air warm and balmy. The sky above is a brilliant blue, and the trees are adorned with vibrant green leaves. A tranquil lake glimmers in the distance, and the sound of birdsong fills the air.",
+        "coordinates": {
+          "x": 0,
+          "y": -1,
+          "z": 0
+        },
+        "objects": [
+          {
+            "name": "palm tree",
+            "description": "A tall, majestic palm tree that looks like it might be the perfect place to build a treehouse.",
+            "container": false,
+            "visibility": "visible"
+          },
+          {
+            "name": "sand",
+            "description": "A soft, golden sand that looks like it might be the perfect place to build a sandcastle.",
+            "container": true,
+            "contents": [
+              {
+                "name": "shell",
+                "description": "A beautiful, delicate shell that looks like it might be the perfect addition to any collection."
+              }
+            ],
+            "visibility": "visible"
+          }
+        ]
+      },
+      {
+        "name": "Eastern Area",
+        "description": "You enter the eastern area, the air filled with the scent of exotic spices. The sky above is a brilliant blue, and the trees are adorned with vibrant flowers. A bustling marketplace fills the air with the sounds of merchants hawking their wares.",
+        "coordinates": {
+          "x": 2,
+          "y": 2,
+          "z": 0
+        },
+        "objects": [
+          {
+            "name": "market stall",
+            "description": "A colorful market stall filled with exotic goods and treasures.",
+            "container": true,
+            "contents": [
+              {
+                "name": "spice",
+                "description": "A fragrant spice that looks like it might be the perfect addition to any dish."
+              }
+            ],
+            "visibility": "visible"
+          },
+          {
+            "name": "vendor",
+            "description": "A friendly vendor who looks like they might be willing to make a deal.",
+            "container": false,
+            "visibility": "visible"
+          }
+        ]
+      },
+      {
+        "name": "Western Area",
+        "description": "You enter the western area, the air filled with the scent of saltwater and seaweed. The sky above is a brilliant blue, and the trees are adorned with seagulls. A rugged coastline stretches out before you, the sound of waves crashing against the shore filling the air.",
+        "coordinates": {
+          "x": -2,
+          "y": 2,
+          "z": 0
+        },
+        "objects": [
+          {
+            "name": "lighthouse",
+            "description": "A tall, majestic lighthouse that looks like it might be the perfect place to get a great view.",
+            "container": false,
+            "visibility": "visible"
+          },
+          {
+            "name": "rocky shore",
+            "description": "A rugged, rocky shoreline that looks like it might be the perfect place to explore.",
+            "container": true,
+            "contents": [
+              {
+                "name": "shell",
+                "description": "A beautiful, delicate shell that looks like it might be the perfect addition to any collection."
+              },
+              {
+                "name": "pebble",
+                "description": "A small, smooth pebble that looks like it might be the perfect souvenir."
+              }
+            ],
+            "visibility": "visible"
+          }
+        ]
+      }
+    ]
+  }
+}

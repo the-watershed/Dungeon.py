@@ -1,8 +1,12 @@
 import random
 import json
 import os
-from decs import Dungeon, Player, roll_dice
+import time
+from decs import Dungeon, Player, Character
 from colors import colorize, BLUE, CYAN, GREEN, YELLOW, WHITE, BG_BLUE, RED
+from funcs import display_ascii_art
+
+
 
 def main():
     dungeon = Dungeon()
@@ -38,6 +42,7 @@ def main():
             print(colorize("I don't understand that command.", RED))
 
 if __name__ == "__main__":
+    display_ascii_art()
     print(colorize("Dungeon - Abandon All Hope, Ye Who Enter Here", BLUE, BG_BLUE))
     print(colorize("A Text Adventure of Despair and Discovery", YELLOW, BG_BLUE))
     print()

@@ -1,6 +1,8 @@
 import random
 import json
 import os
+from dataclasses import dataclass, field
+from typing import List, Dict
 
 class Dungeon:
     def __init__(self):
@@ -86,11 +88,38 @@ class Item:
     def __init__(self, name, description):
         self.name = name
         self.description = description
-
+        
+@dataclass
 class Character:
-    def __init__(self, name, description):
-        self.name = name
-        self.description = description
-
-def roll_dice(num_dice, sides):
-    return sum(random.randint(1, sides) for _ in range(num_dice))
+    name: str
+    race: str
+    class_type: str
+    level: int = 1
+    strength: int = 0
+    intelligence: int = 0
+    wisdom: int = 0
+    dexterity: int = 0
+    constitution: int = 0
+    charisma: int = 0
+    hit_points: int = 0
+    armor_class: int = 10
+    gold: int = 0
+    experience: int = 0
+    inventory: List[str] = field(default_factory=list)
+    equipment: Dict[str, str] = field(default_factory=dict)
+    spells: List[str] = field(default_factory=list)
+    skills: List[str] = field(default_factory=list)
+    
+    def add_item(self, item: str):
+        self.inventory.append(item)
+    
+    def remove_item(self, item: str):
+        if item in self.inventory:
+            self.inventory.remove(item)
+    
+    def equip_item(self, slot: str, item: str):
+        self.equipment[slot] = item
+    
+    def unequip_item(self, slot: str):
+        if slot in self.equipment:
+            del self.equipment[slot]

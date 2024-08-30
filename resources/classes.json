@@ -1,206 +1,68 @@
-  {
-    "Fighter": {
-      "description": "Warriors skilled in combat and warfare.",
-      "abilities": [
-        "Weapon Specialization",
-        "Extra Attacks"
-      ],
-      "traits": [
-        "High Hit Points",
-        "Proficient with all weapons and armor"
-      ],
-      "modifiers": {
-        "strength": 1,
-        "constitution": 1
-      },
-      "alignments": [
-        "Lawful Good",	"Neutral Good",	"Chaotic Good",
-        "Lawful Neutral",	"True Neutral",	"Chaotic Neutral",
-        "Lawful Evil",	"Neutral Evil",	"Chaotic Evil"
-      ],
-      "races": [
-        "Human",
-        "Dwarf",
-        "Elf",
-        "Half-Elf",
-        "Halfling"
-      ],
-      "hit_dice": "1d10",
-      "saving_throws": {
-        "paralysis_poison_death_magic": 14,
-        "petrification_polymorph": 15,
-        "rod_staff_wand": 16,
-        "breath_weapon": 17,
-        "spell": 17
-      }
-    },
-    "Magic-User": {
-      "description": "Practitioners of arcane magic, capable of casting powerful spells.",
-      "abilities": [
-        "Spellcasting",
-        "Read Magic"
-      ],
-      "traits": [
-        "Wide variety of spells",
-        "Limited weapon and armor use"
-      ],
-      "modifiers": {
-        "intelligence": 1
-      },
-      "alignments": [
-        "Lawful Good",	"Neutral Good",	"Chaotic Good",
-        "Lawful Neutral",	"True Neutral",	"Chaotic Neutral",
-        "Lawful Evil",	"Neutral Evil",	"Chaotic Evil"
-      ],
-      "races": [
-        "Human",
-        "Elf",
-        "Half-Elf"
-      ],
-      "hit_dice": "1d4",
-      "saving_throws": {
-        "paralysis_poison_death_magic": 13,
-        "petrification_polymorph": 13,
-        "rod_staff_wand": 11,
-        "breath_weapon": 15,
-        "spell": 12
-      }
-    },
-    "Cleric": {
-      "description": "Holy warriors who wield divine magic in service of a higher power.",
-      "abilities": [
-        "Turn Undead",
-        "Divine Spellcasting"
-      ],
-      "traits": [
-        "Healing spells",
-        "Proficient with blunt weapons"
-      ],
-      "modifiers": {
-        "wisdom": 1
-      },
-      "alignments": [
-        "Lawful Good",	"Neutral Good",	"Chaotic Good",
-        "Lawful Neutral",	"True Neutral",	"Chaotic Neutral",
-        "Lawful Evil",	"Neutral Evil",	"Chaotic Evil"
-      ],
-      "races": [
-        "Human",
-        "Dwarf",
-        "Half-Elf"
-      ],
-      "hit_dice": "1d8",
-      "saving_throws": {
-        "paralysis_poison_death_magic": 10,
-        "petrification_polymorph": 13,
-        "rod_staff_wand": 14,
-        "breath_weapon": 16,
-        "spell": 15
-      }
-    },
-    "Thief": {
-      "description": "Skilled in stealth, subterfuge, and overcoming obstacles.",
-      "abilities": [
-        "Backstab",
-        "Pick Pockets",
-        "Open Locks",
-        "Find/Remove Traps",
-        "Move Silently",
-        "Hide in Shadows",
-        "Climb Walls",
-        "Listen"
-      ],
-      "traits": [
-        "Sneak Attack",
-        "Trap Detection"
-      ],
-      "modifiers": {
-        "dexterity": 1
-      },
-      "alignments": [
-        "Neutral Good",	"Chaotic Good",
-        "Lawful Neutral",	"True Neutral",	"Chaotic Neutral",
-        "Lawful Evil",	"Neutral Evil",	"Chaotic Evil"
-      ],
-      "races": [
-        "Human",
-        "Dwarf",
-        "Elf",
-        "Half-Elf",
-        "Halfling"
-      ],
-      "hit_dice": "1d6",
-      "saving_throws": {
-        "paralysis_poison_death_magic": 13,
-        "petrification_polymorph": 12,
-        "rod_staff_wand": 14,
-        "breath_weapon": 16,
-        "spell": 15
-      }
-    },
-    "Paladin": {
-      "description": "Holy knights, combining the fighting abilities of a fighter with divine powers.",
-      "abilities": [
-        "Detect Evil",
-        "Lay on Hands",
-        "Divine Protection",
-        "Turn Undead"
-      ],
-      "traits": [
-        "Immune to Disease",
-        "Warhorse at higher levels"
-      ],
-      "modifiers": {
-        "strength": 1,
-        "charisma": 1
-      },
-      "alignments": [
-        "Lawful Good"
-      ],
-      "races": [
-        "Human"
-      ],
-      "hit_dice": "1d10",
-      "saving_throws": {
-        "paralysis_poison_death_magic": 12,
-        "petrification_polymorph": 13,
-        "rod_staff_wand": 14,
-        "breath_weapon": 15,
-        "spell": 15
-      }
-    },
-    "Ranger": {
-      "description": "Skilled warriors and trackers, at home in the wilderness.",
-      "abilities": [
-        "Track",
-        "Favored Enemy"
-      ],
-      "traits": [
-        "Dual-Wield",
-        "Animal Empathy"
-      ],
-      "modifiers": {
-        "strength": 1,
-        "dexterity": 1,
-        "wisdom": 1
-      },
-      "alignments": [
-        "Lawful Good",
-        "Neutral Good",
-        "Chaotic Good"
-      ],
-      "races": [
-        "Human",
-        "Elf",
-        "Half-Elf"
-      ],
-      "hit_dice": "1d8",
-      "saving_throws": {
-        "paralysis_poison_death_magic": 13,
-        "petrification_polymorph": 14,
-        "rod_staff_wand": 15,
-        "breath_weapon": 16,
-        "spell": 16
-      }
-    }
-  }
+{
+    "classes": [
+        {
+            "name": "Cleric",
+            "description": "A devout servant of a higher power who wields divine magic.",
+            "hit_dice": "d8",
+            "alignment": ["Lawful Good", "Neutral Good", "Chaotic Good"],
+            "abilities": ["Wisdom", "Charisma"],
+            "starting_equipment": ["Chain mail", "Shield", "Holy symbol"]
+        },
+        {
+            "name": "Druid",
+            "description": "A guardian of the natural world who can shape shift into various animal forms.",
+            "hit_dice": "d8",
+            "alignment": ["Neutral Good", "True Neutral", "Chaotic Neutral"],
+            "abilities": ["Wisdom", "Intelligence"],
+            "starting_equipment": ["Leather armor", "Shield", "Druidic focus"]
+        },
+        {
+            "name": "Fighter",
+            "description": "A skilled warrior who excels in combat.",
+            "hit_dice": "d10",
+            "alignment": ["Lawful Good", "Neutral Good", "Chaotic Good", "Lawful Evil", "Neutral Evil", "Chaotic Evil"],
+            "abilities": ["Strength", "Constitution"],
+            "starting_equipment": ["Chain mail", "Shield", "Sword"]
+        },
+        {
+            "name": "Illusionist",
+            "description": "A master of deception and misdirection who can create elaborate illusions.",
+            "hit_dice": "d6",
+            "alignment": ["Neutral Good", "True Neutral", "Chaotic Neutral"],
+            "abilities": ["Intelligence", "Charisma"],
+            "starting_equipment": ["Dagger", "Component pouch"]
+        },
+        {
+            "name": "Magic-User",
+            "description": "A wielder of arcane magic who can cast powerful spells.",
+            "hit_dice": "d6",
+            "alignment": ["Neutral Good", "True Neutral", "Chaotic Neutral"],
+            "abilities": ["Intelligence", "Wisdom"],
+            "starting_equipment": ["Dagger", "Component pouch"]
+        },
+        {
+            "name": "Paladin",
+            "description": "A holy warrior who is sworn to uphold justice and righteousness.",
+            "hit_dice": "d10",
+            "alignment": ["Lawful Good"],
+            "abilities": ["Strength", "Charisma"],
+            "starting_equipment": ["Plate mail", "Shield", "Holy symbol"]
+        },
+        {
+            "name": "Ranger",
+            "description": "A skilled hunter and tracker who is at home in the wilderness.",
+            "hit_dice": "d8",
+            "alignment": ["Neutral Good", "True Neutral", "Chaotic Neutral"],
+            "abilities": ["Strength", "Wisdom"],
+            "starting_equipment": ["Leather armor", "Longbow", "Quiver"]
+        },
+        {
+            "name": "Thief",
+            "description": "A sneaky rogue who excels at stealth and deception.",
+            "hit_dice": "d6",
+            "alignment": ["Neutral Good", "True Neutral", "Chaotic Neutral"],
+            "abilities": ["Dexterity", "Intelligence"],
+            "starting_equipment": ["Leather armor", "Short sword", "Thieves' tools"]
+        }
+    ]
+}

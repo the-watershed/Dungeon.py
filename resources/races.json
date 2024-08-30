@@ -1,0 +1,105 @@
+{
+    "races": [
+        {
+            "name": "Human",
+            "bonuses": {
+                "ability_scores": {
+                    "Strength": 1,
+                    "Dexterity": 1,
+                    "Constitution": 1,
+                    "Intelligence": 1,
+                    "Wisdom": 1,
+                    "Charisma": 1
+                }
+            },
+            "abilities": [
+                "Versatile"
+            ],
+            "traits": [
+                "Human Versatility"
+            ]
+        },
+        {
+            "name": "Elf",
+            "bonuses": {
+                "ability_scores": {
+                    "Dexterity": 2,
+                    "Intelligence": 1
+                }
+            },
+            "abilities": [
+                "Darkvision",
+                "Fey Ancestry"
+            ],
+            "traits": [
+                "Elf Magic"
+            ]
+        },
+        {
+            "name": "Dwarf",
+            "bonuses": {
+                "ability_scores": {
+                    "Constitution": 2,
+                    "Strength": 1
+                }
+            },
+            "abilities": [
+                "Darkvision",
+                "Dwarven Resilience"
+            ],
+            "traits": [
+                "Dwarven Combat Training"
+            ]
+        },
+        {
+            "name": "Halfling",
+            "bonuses": {
+                "ability_scores": {
+                    "Dexterity": 2,
+                    "Charisma": 1
+                }
+            },
+            "abilities": [
+                "Brave",
+                "Nimble"
+            ],
+            "traits": [
+                "Halfling Luck"
+            ]
+        },
+        {
+            "name": "Half-Elf",
+            "bonuses": {
+                "ability_scores": {
+                    "Charisma": 2,
+                    "Intelligence": 1,
+                    "Dexterity": 1
+                }
+            },
+            "abilities": [
+                "Darkvision",
+                "Fey Ancestry"
+            ],
+            "traits": [
+                "Half-Elf Versatility"
+            ]
+        },
+        {
+            "name": "Half-Orc",
+            "bonuses": {
+                "ability_scores": {
+                    "Strength": 2,
+                    "Constitution": 1,
+                    "Intimidation": 1
+                }
+            },
+            "abilities": [
+                "Darkvision",
+                "Menacing"
+            ],
+            "traits": [
+                "Half-Orc Ferocity"
+            ]
+        }
+    ]
+}
