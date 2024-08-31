@@ -1,0 +1,80 @@
+{
+    "Forest Clearing": {
+      "description": "You stand in a clearing surrounded by dense trees. A white house with a boarded front door is to the north.",
+      "exits": {
+        "north": "House Front",
+        "east": "Forest Path",
+        "south": "Winding Trail",
+        "west": "Thick Woods"
+      }
+    },
+    "House Front": {
+      "description": "You face the southern side of a white house. The front door is boarded shut, but a path leads around to the east.",
+      "exits": {
+        "south": "Forest Clearing",
+        "east": "House East"
+      }
+    },
+    "House East": {
+      "description": "You're at the east side of the white house. A small window is slightly ajar.",
+      "exits": {
+        "north": "House North",
+        "south": "Garden Path",
+        "west": "House Front"
+      }
+    },
+    "House North": {
+      "description": "You're behind the white house. A trail leads into dark woods.",
+      "exits": {
+        "north": "Dark Woods",
+        "east": "House East",
+        "south": "House Front"
+      }
+    },
+    "Forest Path": {
+      "description": "A narrow path winds through the trees. You hear a faint sound of water to the east.",
+      "exits": {
+        "east": "Babbling Brook",
+        "west": "Forest Clearing"
+      }
+    },
+    "Winding Trail": {
+      "description": "The trail meanders through the forest. Thick underbrush blocks most directions.",
+      "exits": {
+        "north": "Forest Clearing",
+        "east": "Small Glade"
+      }
+    },
+    "Thick Woods": {
+      "description": "The woods here are very dense. You can barely make out a clearing to the east.",
+      "exits": {
+        "east": "Forest Clearing"
+      }
+    },
+    "Babbling Brook": {
+      "description": "A small stream gurgles through the forest. The water looks cool and refreshing.",
+      "exits": {
+        "west": "Forest Path"
+      }
+    },
+    "Small Glade": {
+      "description": "You've entered a peaceful glade. Sunlight filters through the canopy above.",
+      "exits": {
+        "west": "Winding Trail"
+      }
+    },
+    "Dark Woods": {
+      "description": "The forest here is dark and foreboding. You feel uneasy.",
+      "exits": {
+        "south": "House North"
+      }
+    },
+    "Garden Path": {
+      "description": "A overgrown garden path runs along the east side of the house.",
+      "exits": {
+        "north": "House East",
+        "south": "Forest Path"
+      }
+    }
+  }
+  

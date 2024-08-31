@@ -11,24 +11,23 @@ class Dungeon:
         self.player = None
 
     def create_rooms(self):
-        # Load rooms from JSON file
-        script_dir = os.path.dirname(os.path.abspath(__file__))
-        json_path = os.path.join(script_dir, 'resources', 'rooms.json')
-        
-        with open(json_path, 'r') as f:
+        rooms_file_path = os.path.join('resources', 'rooms.json')
+        with open(rooms_file_path, 'r') as f:
             rooms_data = json.load(f)
-
-        # Create Room objects
+        
         for room_name, room_info in rooms_data.items():
-            self.rooms[room_name] = Room(room_name, room_info['description'])
-
-        # Connect rooms
+            new_room = Room(room_name, room_info['description'])
+            if 'items' in room_info:
+                for item in room_info['items']:
+                    new_room.add_item(item)
+            self.rooms[room_name] = new_room
+        
         for room_name, room_info in rooms_data.items():
             for direction, connected_room in room_info['exits'].items():
-                self.rooms[room_name].connect_room(direction, self.rooms[connected_room])
-
+                self.rooms[room_name].exits[direction] = self.rooms[connected_room]    
+                
     def set_starting_room(self):
-        self.current_room = self.rooms["Entrance"]
+        self.current_room = self.rooms['Forest Clearing']
 
     def move_player(self, direction):
         if direction in self.current_room.exits:
@@ -41,31 +40,22 @@ class Room:
         self.name = name
         self.description = description
         self.exits = {}
-        self.items = []
-        self.enemies = []
-        self.is_locked = False
-        self.locked_by = None
-        self.is_cleared = False
-        self.is_cleared_by = None
-        self.is_cleared_by_enemy = False
-        self.is_cleared_by_player = False
-        self.is_cleared_by_item = False
-        self.is_cleared_by_key = False
+        self.inventory = []  # New attribute for room inventory
 
     def connect_room(self, direction, room):
         self.exits[direction] = room
 
     def add_item(self, item):
-        self.items.append(item)
+        self.inventory.append(item)
 
     def remove_item(self, item):
-        self.items.remove(item)
+        if item in self.inventory:
+            self.inventory.remove(item)
+            return True
+        return False
 
-    def add_character(self, character):
-        self.characters.append(character)
-
-    def remove_character(self, character):
-        self.characters.remove(character)
+    def get_items(self):
+        return ", ".join(self.inventory) if self.inventory else "No items here."
 
 class Player:
     def __init__(self, name):
