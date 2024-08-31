@@ -47,5 +47,4 @@ def main():
 
 if __name__ == "__main__":
     display_title_screen()
-    display_save_menu(stdscr)
-    main()
+    curses.wrapper(main)

@@ -173,4 +173,60 @@ def display_race_selection(races):
                 if selected_class:
                     return selected_class
         
-            print("Invalid choice. Please try again.")            
+            print("Invalid choice. Please try again.")
+
+def display_character_creation_screen(stdscr):
+    # Set the background color to blue and the text color to white
+    stdscr.bkgd(curses.color_pair(1))
+    curses.init_pair(1, curses.COLOR_WHITE, curses.COLOR_BLUE)
+
+    # Clear the screen
+    stdscr.clear()
+
+    # Print the title
+    stdscr.addstr(1, 1, "Character Creation", curses.color_pair(1))
+
+    # Print the ability scores section
+    stdscr.addstr(3, 1, "Ability Scores:", curses.color_pair(1))
+    stdscr.addstr(4, 1, "Strength: _______", curses.color_pair(1))
+    stdscr.addstr(5, 1, "Dexterity: _______", curses.color_pair(1))
+    stdscr.addstr(6, 1, "Constitution: _______", curses.color_pair(1))
+    stdscr.addstr(7, 1, "Intelligence: _______", curses.color_pair(1))
+    stdscr.addstr(8, 1, "Wisdom: _______", curses.color_pair(1))
+    stdscr.addstr(9, 1, "Charisma: _______", curses.color_pair(1))
+
+    # Print the prompt to roll ability scores
+    stdscr.addstr(11, 1, "Press any key to roll ability scores...", curses.color_pair(1))
+
+    # Refresh the screen
+    stdscr.refresh()
+
+    # Wait for the user to press a key
+    stdscr.getch()
+
+    # Roll ability scores
+    ability_scores = []
+    for i in range(6):
+        score = 0
+        while True:
+            score = sum(sorted([random.randint(1, 6) for _ in range(4)])[1:])
+            stdscr.addstr(4 + i, 10, str(score), curses.color_pair(1))
+            stdscr.refresh()
+            time.sleep(0.1)
+        ability_scores.append(score)
+
+    # Print the rolled ability scores
+    stdscr.addstr(12, 1, "Ability Scores:", curses.color_pair(1))
+    stdscr.addstr(13, 1, f"Strength: {ability_scores[0]}", curses.color_pair(1))
+    stdscr.addstr(14, 1, f"Dexterity: {ability_scores[1]}", curses.color_pair(1))
+    stdscr.addstr(15, 1, f"Constitution: {ability_scores[2]}", curses.color_pair(1))
+    stdscr.addstr(16, 1, f"Intelligence: {ability_scores[3]}", curses.color_pair(1))
+    stdscr.addstr(17, 1, f"Wisdom: {ability_scores[4]}", curses.color_pair(1))
+    stdscr.addstr(18, 1, f"Charisma: {ability_scores[5]}", curses.color_pair(1))
+
+    # Refresh the screen
+    stdscr.refresh()
+
+    # Wait for the user to press a key
+    stdscr.getch()
+
