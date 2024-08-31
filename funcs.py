@@ -6,15 +6,58 @@ import curses
 from colors import colorize, BLUE, WHITE, GREY, BLACK
 import msvcrt
 from decs import Player
+import glob
 
 def display_title_screen():
     ascii_file_path = "./resources/dungeon-ascii.txt"
     if os.path.exists(ascii_file_path):
         with open(ascii_file_path, 'r') as file:
             ascii_art = file.read()
-        print(colorize(ascii_art, BLUE, BLACK))
-        print(colorize("\nPress any key to continue...", WHITE, BLACK))
-        msvcrt.getch()  # Wait for a key press
+        print(colorize(ascii_art, WHITE, BLUE))
+        input(colorize("Abandon all hope, ye who enter here...".center(80), WHITE, BLUE))
+
+def animate_title_screen(stdscr):
+    # Implement the animation to slide the ASCII art to the top
+    pass
+
+def display_save_menu(stdscr):
+    save_files = glob.glob('./saves/*.sav')
+    has_saves = len(save_files) > 0
+
+    options = ['New Game', 'Load Game', 'Quit']
+    current_option = 0
+
+    while True:
+        stdscr.clear()
+        h, w = stdscr.getmaxyx()
+
+        for idx, option in enumerate(options):
+            x = w//2 - len(option)//2
+            y = h//2 - len(options)//2 + idx
+
+            if idx == current_option:
+                stdscr.attron(curses.A_REVERSE)
+
+            if option == 'Load Game' and not has_saves:
+                stdscr.attron(curses.color_pair(2))
+            else:
+                stdscr.attron(curses.color_pair(1))
+
+            stdscr.addstr(y, x, option)
+            stdscr.attroff(curses.A_REVERSE)
+            stdscr.attroff(curses.color_pair(1))
+            stdscr.attroff(curses.color_pair(2))
+
+        stdscr.refresh()
+
+        key = stdscr.getch()
+        if key == curses.KEY_UP and current_option > 0:
+            current_option -= 1
+        elif key == curses.KEY_DOWN and current_option < len(options) - 1:
+            current_option += 1
+        elif key == 10:  # Enter key
+            if options[current_option] != 'Load Game' or has_saves:
+                return options[current_option]
 
 def display_menu():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -73,12 +116,12 @@ def create_character():
     selected_race = display_race_selection(races)
     character.set_race(selected_race)
     
+    from funcs import load_classes, display_class_selection
     classes = load_classes()
     selected_class = display_class_selection(classes, selected_race['name'])
     character.set_class(selected_class)
     
     return character
-
 def load_races():
     with open('./resources/races.json', 'r') as f:
         return json.load(f)
@@ -130,5 +173,4 @@ def display_race_selection(races):
                 if selected_class:
                     return selected_class
         
-            print("Invalid choice. Please try again.")        except ValueError:
-            print("Please enter a valid number.")
+            print("Invalid choice. Please try again.")            
